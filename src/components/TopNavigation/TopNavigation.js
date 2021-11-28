@@ -1,3 +1,5 @@
+import HeaderContacts from '../Contacts/HeaderContacts';
+
 function TopNavigation() {
   return (
     <div>
@@ -14,6 +16,7 @@ function TopNavigation() {
           </li>
         </ul>
       </nav>
+      <HeaderContacts />
     </div>
   );
 }
