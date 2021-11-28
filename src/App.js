@@ -1,8 +1,14 @@
+import 'normalize.css';
 import './App.css';
 import TopNavigation from './components/TopNavigation/TopNavigation';
-import 'normalize.css';
+import BottomNavigation from './components/BottomNavigation/BottomNavigation';
 function App() {
-  return <TopNavigation />;
+  return (
+    <>
+      <TopNavigation />
+      <BottomNavigation />
+    </>
+  );
 }
 
 export default App;
