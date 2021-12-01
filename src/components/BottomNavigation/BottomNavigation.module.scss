@@ -4,6 +4,9 @@
     linear-gradient(0deg, #333333, #333333), #735ff2;
   padding-top: 15px;
   padding-bottom: 15px;
+  font-family: Fira Sans Extra Condensed;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .BottomNavigationList {
@@ -15,6 +18,8 @@
 
 .BottomNavigationItem {
   margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .BottomNavigationLink {
