@@ -1,0 +1,17 @@
+.contactsList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contactsItem {
+  margin-right: 10px;
+}
+
+.contactsLink {
+  font-family: Gilroy;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration-line: underline;
+  color: #333333;
+}

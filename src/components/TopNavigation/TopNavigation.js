@@ -1,4 +1,4 @@
-import HeaderContacts from '../Contacts/HeaderContacts';
+import HeaderContacts from '../HeaderContacts/HeaderContacts';
 
 function TopNavigation() {
   return (
