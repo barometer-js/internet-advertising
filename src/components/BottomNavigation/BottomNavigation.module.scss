@@ -1,0 +1,25 @@
+.BottomNavigation {
+  width: auto;
+  background: linear-gradient(0deg, #333333, #333333),
+    linear-gradient(0deg, #333333, #333333), #735ff2;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.BottomNavigationList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.BottomNavigationItem {
+  margin-right: 20px;
+}
+
+.BottomNavigationLink {
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #ffffff;
+}

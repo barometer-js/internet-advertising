@@ -1,16 +1,24 @@
+import s from './BottomNavigation.module.scss';
+
 function BottomNavigation() {
   return (
     <div>
-      <nav>
-        <ul>
-          <li>
-            <a href="/">Продвижение сайтов</a>
+      <nav className={s.BottomNavigation}>
+        <ul className={s.BottomNavigationList}>
+          <li className={s.BottomNavigationItem}>
+            <a className={s.BottomNavigationLink} href="/">
+              Продвижение сайтов
+            </a>
           </li>
-          <li>
-            <a href="/">Создание сайтов</a>
+          <li className={s.BottomNavigationItem}>
+            <a className={s.BottomNavigationLink} href="/">
+              Создание сайтов
+            </a>
           </li>
-          <li>
-            <a href="/">Контекстная реклама</a>
+          <li className={s.BottomNavigationItem}>
+            <a className={s.BottomNavigationLink} href="/">
+              Контекстная реклама
+            </a>
           </li>
         </ul>
       </nav>
