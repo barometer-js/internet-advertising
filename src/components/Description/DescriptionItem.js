@@ -1,16 +1,16 @@
 import PropTypes from 'prop-types';
-import manImg from '../../images/man.png';
 import s from './DescriptionItem.module.scss';
-function DescriptionItem({ title, description }) {
+function DescriptionItem({ userImg, title, description }) {
   return (
-    <li className={s.item}>
-      <img className={s.manImg} src={manImg} alt="man"></img>
+    <>
+      <img className={s.userImg} src={userImg} alt="user"></img>
       <h3 className={s.title}>{title}</h3>
       <p className={s.description}>{description}</p>
-    </li>
+    </>
   );
 }
 DescriptionItem.propTypes = {
+  userImg: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 };

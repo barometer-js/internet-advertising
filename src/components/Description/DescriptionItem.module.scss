@@ -1,24 +1,36 @@
-.item{
-    width: 168px;
-    font-weight: 500;
-    text-align: center;
-    letter-spacing: -0.31px;
-    line-height: 1.14;
-    color: #272727;
+.list {
+  display: flex;
+  width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.item {
+  width: 168px;
+  text-align: center;
+  letter-spacing: -0.31px;
+  line-height: 1.14;
+  color: #272727;
+  &:not(:last-child) {
+    margin-right: 103px;
+  }
 }
 
-.manImg{
-    width: 139px;
-    height: 139px;
+.userImg {
+  width: 139px;
+  height: 139px;
 }
 
-.title{
-    font-size: 22px;
-    text-transform: uppercase;
-    margin-top: 35px;
+.title {
+  width: 168px;
+  font-family: Fira Sans Extra Condensed;
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-top: 35px;
 }
 
-.description{
-    font-size: 14px;
-    margin-top: 14px;
+.description {
+  font-family: Gilroy;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 14px;
 }
