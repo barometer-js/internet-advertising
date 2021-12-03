@@ -1,0 +1,26 @@
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  font-family: Fira Sans Extra Condensed;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.21;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #333333;
+
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+}
