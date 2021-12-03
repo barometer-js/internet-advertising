@@ -1,5 +1,5 @@
 import search from './SiteCardsImg/search-system.jpg';
-import searchWebp from './SiteCardsImg/search-system.jpg';
+import searchWebp from './SiteCardsImg/search-system-2x.webp';
 import internetBusiness from './SiteCardsImg/Internet-business.jpg';
 import internetBusinessWebp from './SiteCardsImg/Internet-business-2x.webp';
 import programming from './SiteCardsImg/programming.jpg';

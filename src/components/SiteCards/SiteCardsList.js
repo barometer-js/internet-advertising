@@ -10,7 +10,7 @@ export default function SiteCardsList() {
           <SiteCardsItem
             urlWebp={card.urlWebp}
             urlImg={card.urlImg}
-            titel={card.title}
+            title={card.title}
             link={card.link}
             description={card.description}
           />
