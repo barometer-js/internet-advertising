@@ -1,0 +1,55 @@
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333333;
+}
+// .title {
+//   font-family: Fira Sans Extra Condensed;
+//   font-weight: bold;
+//   font-size: 50px;
+//   line-height: 100%;
+//   text-transform: uppercase;
+//   color: #ffffff;
+// }
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.wrapper:not(:last-child) {
+  margin-right: 20px;
+}
+.label:nth-of-type(2n + 1) {
+  margin-bottom: 20px;
+}
+.input,
+.textarea {
+  width: 314px;
+  height: 49px;
+  padding: 15px 18px;
+  background-color: #333333;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  outline: none;
+}
+.textarea {
+  height: 100px;
+  resize: none;
+}
+.input::placeholder,
+.textarea {
+  font-family: Gilroy;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  opacity: 0.9;
+}
+.policy {
+  font-family: Gilroy;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  opacity: 0.9;
+}

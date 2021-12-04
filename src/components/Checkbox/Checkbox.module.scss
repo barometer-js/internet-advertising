@@ -1,0 +1,30 @@
+// .checkbox {
+//   position: absolute;
+//   width: 1px;
+//   height: 1px;
+//   margin: -1px;
+//   border: 0;
+//   padding: 0;
+//   clip: rect(0 0 0 0);
+//   overflow: hidden;
+// }
+
+// .modal-form__checkbox {
+//   @extend %flex;
+//   margin-bottom: 30px;
+// }
+
+// .modal-form__checkbox-icon {
+//   width: 16px;
+//   height: 15px;
+//   border: 2px solid $titleTextColor;
+//   border-radius: 2px;
+//   margin-right: 7px;
+
+//   .modal-form__checkbox-input:checked + & {
+//     background-image: url(../images/icon-check.svg);
+//     background-size: contain;
+//     background-origin: border-box;
+//     border-color: $accentColor;
+//     background-color: $accentColor;
+//   }
