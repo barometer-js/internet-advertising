@@ -6,6 +6,7 @@ import BottomNavigation from './components/BottomNavigation/BottomNavigation';
 import ApplicationForm from './components/Form/Form';
 import { Section } from './components/Section';
 import { Title } from './components/Title';
+import Description from './components/Description/Description';
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
           <Title name="Форма заявки" color="#fff" />
           <ApplicationForm />
         </Section>
+        <Description />
       </>
     );
   }
