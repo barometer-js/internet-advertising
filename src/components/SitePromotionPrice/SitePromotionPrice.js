@@ -10,9 +10,10 @@ function onChangeValue(event) {
 
 export default function SitePromotionPrice({ min, max, step = 1 }) {
   return (
-    <>
-      <div>
+    <div className={styles.component}>
+      <div className={styles.range}>
         <p>Цена</p>
+        <p>{price}</p>
         <p>{max} грн/мес</p>
       </div>
       <input
@@ -24,7 +25,7 @@ export default function SitePromotionPrice({ min, max, step = 1 }) {
         onChange={onChangeValue}
       />
       <button value={price} />
-    </>
+    </div>
   );
 }
 
