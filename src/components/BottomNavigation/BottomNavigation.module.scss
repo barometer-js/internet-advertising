@@ -1,4 +1,4 @@
-.BottomNavigation {
+.bottomNavigation {
   width: auto;
   background: linear-gradient(0deg, #333333, #333333),
     linear-gradient(0deg, #333333, #333333), #735ff2;
@@ -9,20 +9,20 @@
   padding-right: 50px;
 }
 
-.BottomNavigationList {
+.bottomNavigationList {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
-.BottomNavigationItem {
+.bottomNavigationItem {
   margin-right: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.BottomNavigationLink {
+.bottomNavigationLink {
   font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;

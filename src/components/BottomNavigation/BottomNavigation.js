@@ -3,20 +3,20 @@ import s from './BottomNavigation.module.scss';
 function BottomNavigation() {
   return (
     <div>
-      <nav className={s.BottomNavigation}>
-        <ul className={s.BottomNavigationList}>
-          <li className={s.BottomNavigationItem}>
-            <a className={s.BottomNavigationLink} href="/">
+      <nav className={s.bottomNavigation}>
+        <ul className={s.bottomNavigationList}>
+          <li className={s.bottomNavigationItem}>
+            <a className={s.bottomNavigationLink} href="/">
               Продвижение сайтов
             </a>
           </li>
-          <li className={s.BottomNavigationItem}>
-            <a className={s.BottomNavigationLink} href="/">
+          <li className={s.bottomNavigationItem}>
+            <a className={s.bottomNavigationLink} href="/">
               Создание сайтов
             </a>
           </li>
-          <li className={s.BottomNavigationItem}>
-            <a className={s.BottomNavigationLink} href="/">
+          <li className={s.bottomNavigationItem}>
+            <a className={s.bottomNavigationLink} href="/">
               Контекстная реклама
             </a>
           </li>
