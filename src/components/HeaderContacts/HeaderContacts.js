@@ -1,6 +1,7 @@
 import { Icon } from '../Icon';
 import { getStyles } from '../../layout/layout';
 import s from './HeaderContacts.module.scss';
+import PropTypes from 'prop-types';
 const styles = getStyles();
 function HeaderContacts() {
   return (
@@ -22,4 +23,8 @@ function HeaderContacts() {
   );
 }
 
+HeaderContacts.propsTypes = {
+  whatsapp: PropTypes.string.isRequired,
+  viber: PropTypes.string.isRequired,
+};
 export default HeaderContacts;
