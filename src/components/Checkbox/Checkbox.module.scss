@@ -9,22 +9,14 @@
 //   overflow: hidden;
 // }
 
-// .modal-form__checkbox {
-//   @extend %flex;
-//   margin-bottom: 30px;
-// }
-
-// .modal-form__checkbox-icon {
+// .icon {
 //   width: 16px;
 //   height: 15px;
-//   border: 2px solid $titleTextColor;
-//   border-radius: 2px;
-//   margin-right: 7px;
+//   border: 2px solid #000;
+//   border-radius: 2px;}
 
-//   .modal-form__checkbox-input:checked + & {
+//   .checkbox-input:checked + & {
 //     background-image: url(../images/icon-check.svg);
 //     background-size: contain;
 //     background-origin: border-box;
-//     border-color: $accentColor;
-//     background-color: $accentColor;
 //   }
