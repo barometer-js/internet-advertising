@@ -1,26 +1,27 @@
 {
   "files": {
-    "main.css": "/internet-advertising/static/css/main.6c87a321.chunk.css",
-    "main.js": "/internet-advertising/static/js/main.3bc4593c.chunk.js",
-    "main.js.map": "/internet-advertising/static/js/main.3bc4593c.chunk.js.map",
-    "runtime-main.js": "/internet-advertising/static/js/runtime-main.bc00468e.js",
-    "runtime-main.js.map": "/internet-advertising/static/js/runtime-main.bc00468e.js.map",
+    "main.css": "/internet-advertising/static/css/main.fdb1e838.chunk.css",
+    "main.js": "/internet-advertising/static/js/main.911baf71.chunk.js",
+    "main.js.map": "/internet-advertising/static/js/main.911baf71.chunk.js.map",
+    "runtime-main.js": "/internet-advertising/static/js/runtime-main.3ae49d0c.js",
+    "runtime-main.js.map": "/internet-advertising/static/js/runtime-main.3ae49d0c.js.map",
     "static/css/2.679831fc.chunk.css": "/internet-advertising/static/css/2.679831fc.chunk.css",
-    "static/js/2.f4533c54.chunk.js": "/internet-advertising/static/js/2.f4533c54.chunk.js",
-    "static/js/2.f4533c54.chunk.js.map": "/internet-advertising/static/js/2.f4533c54.chunk.js.map",
-    "static/js/3.f1e7ff44.chunk.js": "/internet-advertising/static/js/3.f1e7ff44.chunk.js",
-    "static/js/3.f1e7ff44.chunk.js.map": "/internet-advertising/static/js/3.f1e7ff44.chunk.js.map",
+    "static/js/2.888d6e56.chunk.js": "/internet-advertising/static/js/2.888d6e56.chunk.js",
+    "static/js/2.888d6e56.chunk.js.map": "/internet-advertising/static/js/2.888d6e56.chunk.js.map",
+    "static/js/3.c41bfea2.chunk.js": "/internet-advertising/static/js/3.c41bfea2.chunk.js",
+    "static/js/3.c41bfea2.chunk.js.map": "/internet-advertising/static/js/3.c41bfea2.chunk.js.map",
     "index.html": "/internet-advertising/index.html",
     "static/css/2.679831fc.chunk.css.map": "/internet-advertising/static/css/2.679831fc.chunk.css.map",
-    "static/css/main.6c87a321.chunk.css.map": "/internet-advertising/static/css/main.6c87a321.chunk.css.map",
-    "static/js/2.f4533c54.chunk.js.LICENSE.txt": "/internet-advertising/static/js/2.f4533c54.chunk.js.LICENSE.txt",
-    "static/media/sprite.44f8c484.svg": "/internet-advertising/static/media/sprite.44f8c484.svg"
+    "static/css/main.fdb1e838.chunk.css.map": "/internet-advertising/static/css/main.fdb1e838.chunk.css.map",
+    "static/js/2.888d6e56.chunk.js.LICENSE.txt": "/internet-advertising/static/js/2.888d6e56.chunk.js.LICENSE.txt",
+    "static/media/sprite.44f8c484.svg": "/internet-advertising/static/media/sprite.44f8c484.svg",
+    "static/media/user.f6595c01.svg": "/internet-advertising/static/media/user.f6595c01.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.bc00468e.js",
+    "static/js/runtime-main.3ae49d0c.js",
     "static/css/2.679831fc.chunk.css",
-    "static/js/2.f4533c54.chunk.js",
-    "static/css/main.6c87a321.chunk.css",
-    "static/js/main.3bc4593c.chunk.js"
+    "static/js/2.888d6e56.chunk.js",
+    "static/css/main.fdb1e838.chunk.css",
+    "static/js/main.911baf71.chunk.js"
   ]
 }
