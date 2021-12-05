@@ -8,7 +8,7 @@ function onChangeValue(event) {
   price = event.target.value;
 }
 
-export default function SitePromotionPrice({ min, max, step = 1 }) {
+export default function SitePromotionPrice({ min = 0, max, step = 1 }) {
   return (
     <div className={styles.component}>
       <div className={styles.range}>
