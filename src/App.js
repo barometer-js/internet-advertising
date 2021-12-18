@@ -3,11 +3,11 @@ import 'normalize.css';
 import './App.css';
 import TopNavigation from './components/TopNavigation/TopNavigation';
 import BottomNavigation from './components/BottomNavigation/BottomNavigation';
-import ServiceCard from './components/ServiceCard/ServiceCard';
 import ApplicationForm from './components/Form/Form';
 import { Section } from './components/Section';
 import { Title } from './components/Title';
 import Description from './components/Description/Description';
+import ServiceCard from './components/ServiceCard/ServiceCard';
 
 class App extends Component {
   render() {
@@ -20,7 +20,9 @@ class App extends Component {
           <ApplicationForm />
         </Section>
         <Description />
-        <ServiceCard />
+        <Section>
+          <ServiceCard />
+        </Section>
       </>
     );
   }

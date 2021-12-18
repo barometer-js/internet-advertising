@@ -10,6 +10,7 @@ function ServiceCard() {
           <ServiceCardItem
             number={item.number}
             description={item.description}
+            background={item.background}
           />
         </li>
       ))}

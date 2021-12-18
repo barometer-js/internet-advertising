@@ -3,30 +3,45 @@
 }
 
 .item {
-  width: 168px;
+  position: relative;
+  max-width: 168px;
   text-align: center;
-  line-height: 1.14;
+
   &:not(:last-child) {
-    margin-right: 104px;
+    margin-right: 102px;
   }
 }
 
+.item + .item::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 90px;
+  left: -52px;
+  background: #eaecef;
+}
+
 .number {
+  display: inline-block;
   font-family: Fira Sans Extra Condensed;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 45px;
-  text-transform: uppercase;
+  line-height: 100%;
+  // text-transform: uppercase;
   color: #333333;
+  // max-width: 108px;
 }
 
 .description {
+  display: inline-block;
   font-family: Gilroy;
-  font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: -0.31px;
 
   color: #272727;
   margin-top: 12px;
+  padding: 0 20px;
 }
