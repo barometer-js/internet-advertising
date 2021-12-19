@@ -11,7 +11,8 @@ const Title = styled.h1`
 `;
 
 //   .background1 {
-//     background-image: linear-gradient(#00000033, #00000033),
+//     background-image:
+//  linear - gradient (#00000033, #00000033),
 //       url('../../images/backgroundHero1x.png');
 //   }
 
