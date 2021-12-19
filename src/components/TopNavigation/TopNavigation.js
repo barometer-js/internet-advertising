@@ -1,5 +1,7 @@
 import HeaderContacts from '../Contacts/HeaderContacts';
 import styled from 'styled-components';
+import HeaderLogo from '../Logo/Logo';
+import { Container } from '../Container/Container';
 const NavWrapper = styled.div`
   display: flex;
   justify-content: space-between;
@@ -37,22 +39,25 @@ const NavList = styled.ul`
 
 function TopNavigation() {
   return (
-    <NavWrapper>
-      <nav>
-        <NavList>
-          <li>
-            <a href="/">Акции</a>
-          </li>
-          <li>
-            <a href="/">О компании</a>
-          </li>
-          <li>
-            <a href="/">Контакты</a>
-          </li>
-        </NavList>
-      </nav>
-      <HeaderContacts />
-    </NavWrapper>
+    <Container>
+      <NavWrapper>
+        <HeaderLogo />
+        <nav>
+          <NavList>
+            <li>
+              <a href="/">Акции</a>
+            </li>
+            <li>
+              <a href="/">О компании</a>
+            </li>
+            <li>
+              <a href="/">Контакты</a>
+            </li>
+          </NavList>
+        </nav>
+        <HeaderContacts />
+      </NavWrapper>
+    </Container>
   );
 }
 
