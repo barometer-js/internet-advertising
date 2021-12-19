@@ -1,0 +1,30 @@
+.bottomNavigation {
+  width: auto;
+  background: linear-gradient(0deg, #333333, #333333),
+    linear-gradient(0deg, #333333, #333333), #735ff2;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: Fira Sans Extra Condensed;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.bottomNavigationList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottomNavigationItem {
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.bottomNavigationLink {
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
