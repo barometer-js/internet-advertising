@@ -7,6 +7,7 @@ import ApplicationForm from './components/Form/Form';
 import { Section } from './components/Section';
 import { Title } from './components/Title';
 import Description from './components/Description/Description';
+import TariffList from './components/Tariff/TariffList';
 
 class App extends Component {
   render() {
@@ -19,6 +20,10 @@ class App extends Component {
           <ApplicationForm />
         </Section>
         <Description />
+        <Section color="#F5F7F9">
+          <Title name="Тарифы" color="#000" />
+          <TariffList />
+        </Section>
       </>
     );
   }
