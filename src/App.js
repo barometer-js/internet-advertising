@@ -3,6 +3,7 @@ import 'normalize.css';
 import './App.css';
 import TopNavigation from './components/TopNavigation/TopNavigation';
 import BottomNavigation from './components/BottomNavigation/BottomNavigation';
+import Hero from './components/Hero/Hero';
 import ApplicationForm from './components/Form/Form';
 import { Section } from './components/Section';
 import { Title } from './components/Title';
@@ -15,7 +16,8 @@ class App extends Component {
       <>
         <TopNavigation />
         <BottomNavigation />
-        <Section color="#333333">
+        <Hero />
+        <Section className="applicationForm">
           <Title name="Форма заявки" color="#fff" />
           <ApplicationForm />
         </Section>

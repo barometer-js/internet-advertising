@@ -1,14 +1,19 @@
 import { Container } from './Container/Container';
-export function Section({ children, color }) {
+import styled from 'styled-components';
+
+const SectionWrapper = styled.section`
+  background-color: #333333;
+  padding-right: 100px;
+  padding-left: 100px;
+  .background1 {
+    background-image: linear-gradient(#00000033, #00000033),
+      url('../../images/backgroundHero1x.png');
+  }
+`;
+export function Section({ children }) {
   return (
-    <section
-      style={{
-        backgroundColor: color,
-        paddingRight: '100px',
-        paddingLeft: '100px',
-      }}
-    >
+    <SectionWrapper>
       <Container>{children}</Container>
-    </section>
+    </SectionWrapper>
   );
 }
