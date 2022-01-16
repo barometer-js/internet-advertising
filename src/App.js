@@ -8,6 +8,7 @@ import { Section } from './components/Section';
 import { Title } from './components/Title';
 import Description from './components/Description/Description';
 import TariffList from './components/Tariff/TariffList';
+import Button from './components/Button/Button';
 
 class App extends Component {
   render() {
@@ -24,9 +25,13 @@ class App extends Component {
           <Title name="Тарифы" color="#000" />
           <TariffList />
         </Section>
+        <Button
+          onClick={() => {
+            console.log('Hi!');
+          }}
+        />
       </>
     );
   }
 }
-
 export default App;

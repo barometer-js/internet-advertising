@@ -1,6 +1,7 @@
 import React from 'react';
 import { tariffs } from './Tariffs';
 import TariffItem from './TariffItem';
+import Button from '../Button/Button';
 import s from './Tariff.module.scss';
 
 const TariffList = ({ id, background }) => {
@@ -18,9 +19,10 @@ const TariffList = ({ id, background }) => {
             description={tariff.description}
             price={tariff.price}
           />
-          <button type="submit" className={s.tariffButton}>
+          <Button>{'Оставить заявку'}</Button>
+          {/* <button type="submit" className={s.tariffButton}>
             Оставить заявку
-          </button>
+          </button> */}
         </li>
       ))}
     </ul>
