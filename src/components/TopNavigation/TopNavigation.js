@@ -1,62 +1,43 @@
+import { useRef } from 'react';
 import HeaderContacts from '../Contacts/HeaderContacts';
-import styled from 'styled-components';
 import HeaderLogo from '../Logo/Logo';
 import { Container } from '../Container/Container';
-const NavWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-const NavList = styled.ul`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  li {
-    display: flex;
-    justify-content: baseline;
-    align-items: center;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.2;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: #333333;
-    a {
-      color: inherit;
-      padding-top: 18px;
-      padding-bottom: 18px;
-      display: inline-block;
-    }
-  }
-  li:not(:last-child):after {
-    content: '/';
-    margin-left: 25px;
-    margin-right: 25px;
-    display: block;
-  }
-`;
+import styles from './TopNavigation.module.scss';
+import BurgerMenu from '../BurgerMenu/BurgerMenu.js';
 
 function TopNavigation() {
+  const ref = useRef();
+  console.log(ref);
+  function showElement(ref) {
+    console.log(ref);
+  }
+  showElement();
   return (
     <Container>
-      <NavWrapper>
+      <div className={styles.navWrapper} ref={ref}>
+        <BurgerMenu />
         <HeaderLogo />
-        <nav>
-          <NavList>
-            <li>
-              <a href="/">Акции</a>
+        <nav className="visuallyHidden">
+          <ul className={styles.navList}>
+            <li className={styles.navItem}>
+              <a href="/" className={styles.navLink}>
+                Акции
+              </a>
             </li>
-            <li>
-              <a href="/">О компании</a>
+            <li className={styles.navItem}>
+              <a href="/" className={styles.navLink}>
+                О компании
+              </a>
             </li>
-            <li>
-              <a href="/">Контакты</a>
+            <li className={styles.navItem}>
+              <a href="/" className={styles.navLink}>
+                Контакты
+              </a>
             </li>
-          </NavList>
+          </ul>
         </nav>
         <HeaderContacts />
-      </NavWrapper>
+      </div>
     </Container>
   );
 }
