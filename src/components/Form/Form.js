@@ -1,146 +1,162 @@
-import React, { Component } from 'react';
-import { nanoid } from 'nanoid';
+import { useState } from 'react';
+
 import styles from './Form.module.scss';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import Checkbox from '../Checkbox/Checkbox';
 import { getFetch } from '../../services/getFormData';
+import { useDispatch } from 'react-redux';
+import formActions from '../../redux/ApplicationForm/form-actions';
+import { Section } from '../Section/Section';
+import { Title } from '../Title/Title';
 
-class ApplicationForm extends Component {
-  state = {
-    name: '',
-    surname: '',
-    number: '',
-    email: '',
-    checked: false,
-    value: '',
-  };
+export default function ApplicationForm() {
+  const [name, setName] = useState('');
+  const [surname, setSurname] = useState('');
+  const [number, setNumber] = useState('');
+  const [email, setEmail] = useState('');
+  const [value, setValue] = useState('');
+  const [checked, setChecked] = useState(false);
 
-  static propTypes = {
-    name: PropTypes.string,
-    surname: PropTypes.string,
-    number: PropTypes.string,
-    email: PropTypes.string,
-    checked: PropTypes.bool,
-    value: PropTypes.string,
-  };
+  const dispatch = useDispatch();
 
-  handleCheckboxChange = event =>
-    this.setState({ checked: event.target.checked });
+  const handleCheckboxChange = event => setChecked(event.target.checked);
 
-  nameId = nanoid();
-  surnameId = nanoid();
-  telId = nanoid();
-  emailId = nanoid();
-
-  handleChange = e => {
+  const handleChange = e => {
     const { name, value } = e.currentTarget;
-    this.setState({ [name]: value });
+    console.log(name);
+
+    switch (name) {
+      case 'name':
+        setName(value);
+        break;
+
+      case 'surname':
+        setSurname(value);
+        break;
+
+      case 'number':
+        setNumber(value);
+        break;
+
+      case 'email':
+        setEmail(value);
+        break;
+
+      case 'message':
+        setValue(value);
+        break;
+
+      case 'checked':
+        setChecked(value);
+        break;
+
+      default:
+        break;
+    }
   };
 
-  handleTextareaChange = event => {
-    this.setState({ value: event.currentTarget.value });
+  const handleTextareaChange = event => {
+    setValue(event.currentTarget.value);
   };
 
-  handleSubmit = e => {
+  const handleSubmit = e => {
     e.preventDefault();
-    console.log(`Signed up as: ${this.state.name}`);
+    console.log(`Signed up as: ${name}`);
     const newApplication = {
-      name: this.state.name,
-      phone: this.state.number,
-      surname: this.state.surname,
-      'e-mail': this.state.email,
-      comments: this.state.value,
-      createdAt: new Date(),
+      name,
+      phone: number,
+      surname,
+      'e-mail': email,
+      comments: value,
+      // createdAt: new Date(),
     };
+
     console.log(newApplication);
     getFetch(newApplication);
+    dispatch(formActions.addForm(newApplication));
 
-    this.reset();
+    reset();
   };
 
-  reset = () => {
-    this.setState({
-      name: '',
-      surname: '',
-      number: '',
-      email: '',
-      checked: false,
-      value: 'Your message...',
-    });
+  const reset = () => {
+    setName('');
+    setSurname('');
+    setNumber('');
+    setEmail('');
+    setValue('Your message...');
+    setChecked(false);
   };
 
-  render() {
-    return (
-      <>
-        <form className={styles.form} onSubmit={this.handleSubmit}>
+  return (
+    <>
+      <Section styles={styles.section}>
+        <Title name="Форма заявки" styles={styles.title} />
+        <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.wrapper}>
-            <label className={styles.label} htmlFor={this.nameId}>
+            <label className={styles.label}>
               <input
                 className={styles.input}
                 type="text"
                 name="name"
-                value={this.state.name}
+                value={name}
                 placeholder="Name"
                 pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
                 title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
                 required
-                onChange={this.handleChange}
-                id={this.nameId}
+                onChange={handleChange}
               />
             </label>
 
-            <label className={styles.label} htmlFor={this.surnameId}>
+            <label className={styles.label}>
               <input
                 className={styles.input}
                 type="text"
                 name="surname"
-                value={this.state.surname}
+                value={surname}
                 placeholder="Surname"
                 pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
                 title="Surname may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
                 required
-                onChange={this.handleChange}
-                id={this.surnameId}
+                onChange={handleChange}
               />
             </label>
 
-            <label className={styles.label} htmlFor={this.telId}>
+            <label className={styles.label}>
               <input
                 className={styles.input}
                 type="tel"
                 name="number"
-                value={this.state.number}
+                value={number}
                 placeholder="Number"
                 pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
                 title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
                 required
-                onChange={this.handleChange}
-                id={this.telId}
+                onChange={handleChange}
               />
             </label>
           </div>
 
           <div className={`${styles.wrapper} ${styles.textareaWrapper}`}>
-            <label className={styles.label} htmlFor={this.emailId}>
+            <label className={styles.label}>
               <input
                 className={styles.input}
                 type="email"
                 name="email"
-                value={this.state.email}
+                value={email}
                 placeholder="Email"
                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                 title="Invalid email address"
                 required
-                onChange={this.handleChange}
-                id={this.emailId}
+                onChange={handleChange}
               />
             </label>
 
             <label>
               <textarea
                 className={styles.textarea}
-                value={this.state.value}
-                onChange={this.handleTextareaChange}
+                name="message"
+                value={value}
+                onChange={handleTextareaChange}
                 placeholder="Your message..."
               />
             </label>
@@ -148,10 +164,7 @@ class ApplicationForm extends Component {
 
           <div className={styles.wrapper}>
             <label>
-              <Checkbox
-                checked={this.state.checked}
-                onChange={this.handleCheckboxChange}
-              />
+              <Checkbox checked={checked} onChange={handleCheckboxChange} />
               <span className={styles.policy}>
                 Нажимая на кнопку, вы соглашаетесь <br /> с нашей политикой
                 обработки
@@ -163,9 +176,7 @@ class ApplicationForm extends Component {
             </button>
           </div>
         </form>
-      </>
-    );
-  }
+      </Section>
+    </>
+  );
 }
-
-export default ApplicationForm;
