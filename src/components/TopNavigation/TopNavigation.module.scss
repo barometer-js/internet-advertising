@@ -1,0 +1,47 @@
+.navWrapper {
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media screen and (min-width: 375px) {
+  }
+}
+
+.navList {
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.navItem {
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #333333;
+  }
+  &:not(:last-child):after {
+    @media screen and (min-width: 1440px) {
+      content: '/';
+      margin-left: 25px;
+      margin-right: 25px;
+      display: block;
+    }
+  }
+}
+.navLink {
+  @media screen and (min-width: 1440px) {
+    color: inherit;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    display: inline-block;
+  }
+}

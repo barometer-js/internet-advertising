@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import 'normalize.css';
 import './App.css';
 import TopNavigation from './components/TopNavigation/TopNavigation';
 import BottomNavigation from './components/BottomNavigation/BottomNavigation';
